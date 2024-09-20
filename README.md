@@ -1,4 +1,4 @@
-# DHCN
+# ⭐DHCN
 Official repo for "Dynamic Hypergraph Convolutional Network for No-Reference Point Cloud Quality Assessment", accepted by TCSVT.
 
 ## 📋Environment
@@ -19,8 +19,10 @@ You can simply train DHCN with the following command:
 python train.py
 ```
 
-
+We provide the download links for the projections and patches of the WPC dataset, which can be accessed here ([Onedrive](https://1drv.ms/f/s!AjaDoj_-yWggygWzjplEICwa2G9k?e=5x7b8i)).  
+The file structure is like:
 ```
+WPC
 ├── distorted2D
 │   ├── bag
 │   │   ├── bag_gQP_1_tQP_1_1.png
@@ -28,17 +30,20 @@ python train.py
 │   │   ├── bag_gQP_1_tQP_1_3.png
 ...
 ├── wpc_6patch_2048
-│   ├── hhi_0.npy
-│   ├── hhi_1.npy
-│   ├── hhi_2.npy
+│   ├── bag_gQP_1_tQP_1.npy
+│   ├── bag_gQP_1_tQP_2.npy
+│   ├── bag_gQP_1_tQP_3.npy
 ...
 ```
+If you want to process the dataset yourself, you can run 'utils/get_patch.py' and 'utils/get_projection2D.py'.
 
 ## 📖Testing
 You can simply test DHCN with the following command:
 ```
 python test.py
 ```
+We provide the pre-trained weights on the WPC database ([Onedrive](https://1drv.ms/f/s!AjaDoj_-yWggygWzjplEICwa2G9k?e=5x7b8i)).
+They are obtained by k-fold cross validation, and the final performance result is the average results over all test sets.
 
 ## 🔍Citation
 If you find our work useful, please give us star and cite our paper as:
