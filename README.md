@@ -19,7 +19,7 @@ You can simply train DHCN with the following command:
 python train.py
 ```
 
-We provide the download links for the projections and patches of the WPC dataset, which can be accessed here ([Onedrive](https://1drv.ms/f/s!AjaDoj_-yWggygWzjplEICwa2G9k?e=5x7b8i)).  
+We provide the download links for the projections and patches of the WPC dataset, which can be accessed here ([Onedrive]()).  
 The file structure is like:
 ```
 WPC
@@ -42,7 +42,7 @@ You can simply test DHCN with the following command:
 ```
 python test.py
 ```
-We provide the pre-trained weights on the WPC database ([Onedrive](https://1drv.ms/f/s!AjaDoj_-yWggygWzjplEICwa2G9k?e=5x7b8i)).
+We provide the pre-trained weights on the WPC database ([Onedrive]()).
 They are obtained by k-fold cross validation, and the final performance result is the average results over all test sets.
 
 ## 🔍Citation
