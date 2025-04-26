@@ -26,7 +26,6 @@ def main(config):
     KRCC_all = np.zeros(config.train_test_num, dtype=np.float64)
     RMSE_all = np.zeros(config.train_test_num, dtype=np.float64)
 
-    # Randomly select 80% images for training and the rest for testing
     print('Training and testing on %s dataset for %d rounds...' % (config.dataset, config.train_test_num))
     for i in range(config.train_test_num):
         print('Round %d' % (i + 1))
