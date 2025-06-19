@@ -19,7 +19,7 @@ You can simply train DHCN with the following command:
 python train.py
 ```
 
-We provide the download links for the projections and patches of the WPC dataset, which can be accessed here ([BaiduYunpan](https://pan.baidu.com/s/1ye6sEno6Zq9mAhqnBeg-GA?pwd=df6f)).  
+We provide the download links for the projections and patches of the WPC dataset, which can be accessed here ([BaiduYunpan](https://pan.baidu.com/s/1ye6sEno6Zq9mAhqnBeg-GA?pwd=df6f),[Google Drive](https://drive.google.com/drive/folders/1ekSEoHRDW6dq7DGppTaKXyrtzzAgEBr4?usp=drive_link)).  
 The file structure is like:
 ```
 WPC
