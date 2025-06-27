@@ -379,17 +379,17 @@ class DHCN(nn.Module):
                 m_neighbors[i, -1] = i
                 m_neighbors_val[i, -1] = 0.
 
-        node_idx = m_neighbors.reshape(-1)
-        edge_idx = np.tile(np.arange(n_edges).reshape(-1, 1), (1, n_neighbors + 1)).reshape(-1)
+        neg_idx = m_neighbors.reshape(-1)
+        node_idx = np.tile(np.arange(n_edges).reshape(-1, 1), (1, n_neighbors + 1)).reshape(-1)
 
         if not is_prob:
-            values = np.ones(node_idx.shape[0])
+            values = np.ones(neg_idx.shape[0])
         else:
             avg_dist = np.mean(m_dist)
             m_neighbors_val = m_neighbors_val.reshape(-1)
             values = np.exp(-np.power(m_neighbors_val, 2.) / np.power(avg_dist, 2.))
 
-        knn = sparse.coo_matrix((values, (node_idx, edge_idx)), shape=(n_nodes, n_edges)).toarray()
+        knn = sparse.coo_matrix((values, (node_idx, neg_idx)), shape=(n_nodes, n_edges)).toarray()
         return knn
 
     def similarity(self, X, n_neighbors):
